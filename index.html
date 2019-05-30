@@ -2,26 +2,145 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+	<link href="src/styles.css" type="text/css" rel="stylesheet">
 	<title>FreeCodeCamp Survey Form</title>
 </head>
-<body>
-	<h1 id="title">Survey Form</h1>
-	<p id="description">This is a Responsive Web Design Project for FreeCodeCamp.</p>
-	<div class="survey-form__wrapper">
-		<form action="#" method="post" id="survey-form">
-			<label for="name" id="name-label">Your name:*</label>
-			<input type="text" id="name" name="name" placeholder="Tony Stark" required>
-			<label for="email" id="email-label">Your e-mail:*</label>
-			<input type="email" id="email" name="email" placeholder="iron_man@avengers.com" required>
-			<label for="number" id="number-label">Your age:*</label>
-			<input type="number" id="number" name="age" min="1" max="120" placeholder="1" required>
-			<label></label>
-			<select id="dropdown">
-				<option></option>
-			</select>
-		</form>
+<body class="fcc-survey">
+<header class="header">
+	<div class="container">
+		<h1 class="main-title" id="title">Survey Form</h1>
+		<p class="main-description" id="description">This is a Responsive Web Design Project for FreeCodeCamp</p>
 	</div>
-	<p>&copy; Created by Kristina Kuzmenko, 2019.</p>
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</header>
+<main class="content">
+	<div class="container">
+		<div class="survey-form__wrapper">
+			<form action="#" method="post" id="survey-form" autocomplete="on">
+				<div class="input-wrapper">
+					<label class="input-label" for="name" id="name-label">Your name:<span
+									class="input-label-star">*</span></label>
+					<input class="input" type="text" id="name" name="name" placeholder="Tony Stark" required>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label" for="email" id="email-label">Your e-mail:<span
+									class="input-label-star">*</span></label>
+					<input class="input" type="email" id="email" name="email" placeholder="iron_man@avengers.com" required>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label" for="number" id="number-label">Your age:<span
+									class="input-label-star">*</span></label>
+					<input class="input" type="number" id="number" name="age" min="1" max="120" placeholder="1" required>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label" for="number" id="number-label">Enter today's date:<span
+									class="input-label-star">*</span></label>
+					<input class="input" type="date" id="date" name="todays-date" required>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label" for="dropdown">Your favourite superhero in Marvel Universe?<span
+									class="input-label-star">*</span></label>
+					<select class="select" id="dropdown">
+						<option value="ca">Captain America</option>
+						<option value="cm">Captain Marvel</option>
+						<option value="im">Iron Man</option>
+						<option value="hulk">Hulk</option>
+						<option value="bw">Black Widow</option>
+						<option value="thor">Thor</option>
+						<option value="gog">Guardians Of Galaxy</option>
+						<option value="ds">Dr. Strange</option>
+						<option value="bp">Black Panther</option>
+						<option value="hawkeye">Hawkeye</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label">Which part of "Avengers" is your favourite?</label>
+					<ul class="fcc-survey__list-container">
+						<li>
+							<input type="radio" id="avengersChoice1"
+							       name="radio-button" value="avengers-1" checked>
+							<label class="input-label input-label--radio" for="avengersChoice1">Avengers</label>
+						</li>
+						<li>
+							<input type="radio" id="avengersChoice2"
+							       name="radio-button" value="avengers-2">
+							<label class="input-label input-label--radio" for="avengersChoice2">Avengers: Age of Ultron</label>
+						</li>
+						<li>
+							<input type="radio" id="avengersChoice3"
+							       name="radio-button" value="avengers-3">
+							<label class="input-label input-label--radio" for="avengersChoice3">Avengers: Infinity War</label>
+						</li>
+						<li>
+							<input type="radio" id="avengersChoice4"
+							       name="radio-button" value="avengers-4">
+							<label class="input-label input-label--radio" for="avengersChoice4">Avengers: Endgame</label>
+						</li>
+						<li>
+							<input type="radio" id="avengersChoice5"
+							       name="radio-button" value="avengers-all">
+							<label class="input-label input-label--radio" for="avengersChoice5">All of them</label>
+						</li>
+					</ul>
+				</div>
+
+				<div class="input-wrapper">
+					<label class="input-label">Which of these fantasy movies or TV Shows do you like? </label>
+					<ul class="fcc-survey__list-container">
+						<li>
+							<input type="checkbox" id="x-men"
+							       name="checkbox-button" value="x-men">
+							<label class="input-label input-label--checkbox" for="x-men">X-Men Series</label>
+						</li>
+						<li>
+							<input type="checkbox" id="dc"
+							       name="checkbox-button" value="dc">
+							<label class="input-label input-label--checkbox" for="dc">DC Universe</label>
+						</li>
+						<li>
+							<input type="checkbox" id="got"
+							       name="checkbox-button" value="got" checked>
+							<label class="input-label input-label--checkbox" for="got">Game Of Thrones</label>
+						</li>
+						<li>
+							<input type="checkbox" id="lotr"
+							       name="checkbox-button" value="lotr">
+							<label class="input-label input-label--checkbox" for="lotr">Lord Of The Rings / Hobbit</label>
+						</li>
+						<li>
+							<input type="checkbox" id="harry-potter"
+							       name="checkbox-button" value="harry-potter">
+							<label class="input-label input-label--checkbox" for="harry-potter">Harry Potter</label>
+						</li>
+						<li>
+							<input type="checkbox" id="star-wars"
+							       name="checkbox-button" value="star-wars">
+							<label class="input-label input-label--checkbox" for="star-wars">Star Wars</label>
+						</li>
+						<li>
+							<input type="checkbox" id="warcraft"
+							       name="checkbox-button" value="warcraft">
+							<label class="input-label input-label--checkbox" for="warcraft">Warcraft</label>
+						</li>
+					</ul>
+				</div>
+				<div class="input-wrapper">
+					<label class="input-label">If you have other favourite movies or cartoons, you may enter them:</label>
+					<textarea class="textarea" name="additional-info" id="favourites" placeholder="Type here..."></textarea>
+				</div>
+				<div class="input-wrapper">
+					<input class="submit" type="submit" id="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<p class="footer__content">&copy; Created by Kristina Kuzmenko, 2019.</p>
+	</div>
+</footer>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

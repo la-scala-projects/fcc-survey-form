@@ -1,0 +1,244 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.fcc-survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Gotham, sans-serif;
+  background-color: #E0F7FA;
+  color: #25283d;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+}
+
+.header {
+  background-color: #0097A7;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.header,
+.content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.main-title {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+}
+
+.main-description {
+  margin: 0;
+}
+
+.survey-form__wrapper {
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 25px 25px 0 25px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 25px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.input-label {
+  display: inline;
+  text-align: left;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+}
+
+.input-label-star {
+  color: red;
+}
+
+.input-label--radio,
+.input-label--checkbox {
+  padding-right: 0;
+  padding-left: 30px;
+  position: relative;
+  line-height: 2em;
+}
+
+.input-label--radio::before,
+.input-label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ACC1;
+}
+
+.input-label--radio::before {
+  border-radius: 50%;
+}
+
+.input-label--radio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #00ACC1;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked ~ .input-label--radio::after {
+  display: block;
+}
+
+.input-label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-image: url("images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked ~ .input-label--checkbox::after {
+  display: block;
+}
+
+.input,
+.textarea {
+  display: flex;
+  width: 90%;
+  font-family: Gotham, sans-serif;
+  font-size: 16px;
+  border: 2px solid #00ACC1;
+  padding: 5px 10px;
+}
+
+.input,
+.select {
+  min-height: 44px;
+}
+
+.select {
+  display: flex;
+  font-family: Gotham, sans-serif;
+  font-size: 16px;
+  border: 2px solid #00ACC1;
+  padding: 5px 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+.textarea {
+  min-height: 100px;
+}
+
+.fcc-survey__list-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0;
+}
+
+.submit {
+  background-color: #00ACC1;
+  border: none;
+  color: #ffffff;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #00838F;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #00838F;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer__content {
+  margin: 0;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .input-wrapper {
+    flex-direction: row;
+  }
+
+  .input,
+  .textarea {
+    width: 50%;
+  }
+
+  .select {
+    padding: 10px;
+    min-width: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+
+  .input-label {
+    text-align: right;
+    min-height: 2em;
+    min-width: 50%;
+    max-width: 50%;
+    padding-right: 25px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .survey-form__wrapper {
+    width: 60%;
+  }
+}
