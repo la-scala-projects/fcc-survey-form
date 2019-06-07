@@ -135,7 +135,7 @@ input[type="radio"]:checked ~ .input-label--radio::after {
   display: none;
   width: 10px;
   height: 10px;
-  background-image: url("images/tick.svg");
+  background-image: url("../images/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
